@@ -6,7 +6,7 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -14,8 +14,10 @@
                 extend: {
                     colors: {
                         customGray: '#222222',
+                        customGray2: '#050505',
                         customYellow : '#FFDA0B',
-                        customLightGray: '#D9D9D9'
+                        customLightGray: '#D9D9D9',
+                        bgColor: '#F3EFE8'
                     },
                     spacing: {  
                         '18': '4.5rem', // 72px  
@@ -87,23 +89,23 @@
     </section>
 
     <section class="services p-16">
-        <div class="header text-center">
-            <h1 class="text-6xl font-bold "><span class="custom-underline">services</span></h1>
-            <h4 class="pt-2 font-semibold">Here are the services we are providing to you</h4>
-        </div>
 
-        <div class="services-content grid grid-cols-3 gap-12 mt-16">
-            
-
-        </div>
-
-        <div class="footer mt-16 flex justify-center items-center">
-            <div class="connect-btn text-customGray">
-                <a class="px-16 py-3 bg-customYellow rounded-full font-semibold" href="#">View All</a>
-            </div>
-        </div>
     </section>
 
+    <section class="portfolios p-16">
+
+    </section>
+
+    <section class="testimonials p-16"></section>
+
+    </section>
+    
+    <footer class="p-32 bg-customGray">
+        <div class="logo text-bgColor">
+            <h1 class="text-8xl">KA.</h1>
+        </div>
+    </footer>
+   
     <script src="index.js"></script>
 </body>
 </html>

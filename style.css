@@ -20,7 +20,7 @@
 
 body{
     font-size: 22px;
-    background-color: #F2EFE7;
+    background-color: #F3EFE8;
     overflow-x: hidden;
 }
 
@@ -66,7 +66,8 @@ body{
 
 .custom-underline {  
     position: relative;  
-  }  
+    display: inline-block;
+}  
   
 .custom-underline::after {  
     content: '';  
@@ -77,6 +78,23 @@ body{
     height: 16px;  
     background-color: #FFDA0B; 
     rotate: 3deg;
+    z-index: -1; 
+} 
+
+.custom-underline-small {  
+    position: relative;  
+    display: inline-block;
+}  
+  
+.custom-underline-small::after {  
+    content: '';  
+    position: absolute;  
+    left: 0;  
+    right: 0;  
+    bottom: 4px; 
+    height: 7px;  
+    background-color: #FFDA0B; 
+    rotate: 2deg;
     z-index: -1; 
 } 
 
@@ -125,4 +143,15 @@ body{
 
 .service-card{
     width: fit-content;
+}
+
+.user-icon-container{
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -5rem;
+    border: 7px #F3EFE8 solid;
 }
