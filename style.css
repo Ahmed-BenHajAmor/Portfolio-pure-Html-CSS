@@ -50,15 +50,16 @@ body{
 }
 
 .home-img img{
-    min-width: 32rem;
+    min-width: 29rem;
 }
 
-section:not(:first-of-type){
+.height-full{
     height: 100vh;
 }
 
 .home{
     height: calc(100vh - 110px);
+    padding: 9rem 10rem;
 }
 
 
@@ -79,8 +80,8 @@ z-index: -1;
 } 
 
 .home-img-yellow-bg{
-    width: 30.82rem;
-    height: 30.82rem;
+    width: 27.8rem;
+    height: 27.8rem;
     background-color: #FFDA0B;
     position: absolute;
     z-index: -1;
