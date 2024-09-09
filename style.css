@@ -43,6 +43,11 @@ body{
     
 }
 
+.home-img{
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+}
 
 .home-img img{
     min-width: 32rem;
@@ -61,14 +66,24 @@ section:not(:first-of-type){
     position: relative;  
   }  
   
-  .custom-underline::after {  
-    content: '';  
-    position: absolute;  
-    left: 0;  
-    right: 0;  
-    bottom: 4px; 
-    height: 16px;  
-    background-color: #FFDA0B; 
-    rotate: 3deg;
-    z-index: -1; 
-  } 
+.custom-underline::after {  
+content: '';  
+position: absolute;  
+left: 0;  
+right: 0;  
+bottom: 4px; 
+height: 16px;  
+background-color: #FFDA0B; 
+rotate: 3deg;
+z-index: -1; 
+} 
+
+.home-img-yellow-bg{
+    width: 30.82rem;
+    height: 30.82rem;
+    background-color: #FFDA0B;
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    
+}
