@@ -1,10 +1,20 @@
+@font-face {  
+    font-family: 'Neogrotesk';  
+    src: url('path/to/neogrotesk-smallcaps-regular.woff2') format('woff2'),  
+         url('path/to/neogrotesk-smallcaps-regular.woff') format('woff'),  
+         url('path/to/neogrotesk-smallcaps-regular.ttf') format('truetype');  
+    font-weight: normal;  
+    font-style: normal;  
+    font-variant: small-caps; /* Enables small caps */  
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    font-family: 'Roboto', sans-serif;  
+    font-family: 'Neogrotesk', sans-serif;  
 
 }
 
@@ -25,3 +35,40 @@ body{
 .connect-btn a{
     font-size: 27px;
 }
+
+
+.home-content-container h1{
+    font-size: 3.4rem;
+    font-weight: 600;
+    
+}
+
+
+.home-img img{
+    min-width: 32rem;
+}
+
+section:not(:first-of-type){
+    height: 100vh;
+}
+
+.home{
+    height: calc(100vh - 110px);
+}
+
+
+.custom-underline {  
+    position: relative;  
+  }  
+  
+  .custom-underline::after {  
+    content: '';  
+    position: absolute;  
+    left: 0;  
+    right: 0;  
+    bottom: 4px; 
+    height: 16px;  
+    background-color: #FFDA0B; 
+    rotate: 3deg;
+    z-index: -1; 
+  } 

@@ -13,7 +13,10 @@
                     colors: {
                         customGray: '#222222',
                         customYellow : '#FFDA0B'
-                    }
+                    },
+                    spacing: {  
+                        '18': '4.5rem', // 72px  
+                    },
                 }
             }
         }
@@ -42,8 +45,27 @@
     </nav>
 
 
-    <section class="home">
+    <section class="home flex justify-center items-center p-18">
+        <div class="home-content-container">
+            <h1>HEY, I'M KAZIM, A CREATIVE <span class="custom-underline">UI/UX</span> DESIGNER AND DEVELOPER.</h1>
 
+            <ul id="home-ul" class="flex gap-8 mt-8">
+                <!--content will be added dynamically using index.js (to avoid creating three tags)-->
+            </ul>
+
+            <div class="home-btns mt-16 flex gap-12">
+                <div class="connect-btn text-customGray">
+                    <a class="px-16 py-3 border-2 border-customGray rounded-full font-semibold" href="#">Want to discuss ?</a>
+                </div>
+                <div class="connect-btn text-customGray">
+                    <a class="px-16 py-3 bg-customYellow rounded-full font-semibold" href="#">Let's Talk.</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="home-img">
+            <img src="assets/home-image.png" alt="my-img">
+        </div>
     </section>
 
 
