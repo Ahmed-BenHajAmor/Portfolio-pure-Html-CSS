@@ -59,7 +59,7 @@ body{
 }
 
 .home{
-    min-height: calc(100vh - 110px);
+    height: calc(100vh - 110px);
     padding: 9rem 10rem;
 }
 
@@ -69,15 +69,15 @@ body{
   }  
   
 .custom-underline::after {  
-content: '';  
-position: absolute;  
-left: 0;  
-right: 0;  
-bottom: 4px; 
-height: 16px;  
-background-color: #FFDA0B; 
-rotate: 3deg;
-z-index: -1; 
+    content: '';  
+    position: absolute;  
+    left: 0;  
+    right: 0;  
+    bottom: 4px; 
+    height: 16px;  
+    background-color: #FFDA0B; 
+    rotate: 3deg;
+    z-index: -1; 
 } 
 
 .home-img-yellow-bg{
@@ -120,3 +120,9 @@ z-index: -1;
         transform: translateX(100%); 
     }  
 }  
+
+
+
+.service-card{
+    width: fit-content;
+}

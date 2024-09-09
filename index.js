@@ -22,8 +22,24 @@ const rollList = (text)=>{
 
     
 }
+
+const addService = (text)=>{
+    const servicesContent = document.querySelector('.services-content');
+    const element = `<div class="service-card flex justify-start items-center rounded-lg bg-customLightGray gap-8 p-10 w-full text-3xl">
+                <i class="fas fa-address-card text-customGray"></i>
+                <p class="">${text}</p>
+            </div>`
+            
+    const tempDiv = document.createElement('div')
+    tempDiv.innerHTML = element
+    console.log(tempDiv.firstChild);
+    
+    servicesContent.appendChild(tempDiv.firstChild)
+
+}
 const homeUlArr = ['Designer', 'Figma', 'Developer']
 const rollUlArr = ['UI/UX', 'DEVELOPMENT', 'PRODUCT DESIGN', 'SOCIAL MEDIA DESIGN', 'BRANDING']
+const services = ['UI/UX Designing', 'Web Development', 'Graphic Designing', 'Product Designing', 'Social Media Posts']
 
 document.addEventListener('DOMContentLoaded', ()=>{
     homeUlArr.forEach(el => {
@@ -34,5 +50,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
     rollUlArr.forEach(el => {
         
         rollList(el)
+    })
+
+    services.forEach(el => {
+        addService(el)
     })
 })
