@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        customGray: '#222222',
+                        customYellow : '#FFDA0B'
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <nav class="flex justify-between items-center px-16 py-4 ">
+        
+        <div class="logo text-customGray">
+            <h1 class="text-6xl font-black">KA.</h1>
+        </div>
+
+        <div class="links text-customGray ">
+            <ul class="flex gap-4">
+                <li class="p-4 cursor-pointer font-medium text-2xl"><a href="#">Home</a></li>
+                <li class="p-4 cursor-pointer font-medium text-2xl"><a href="#">Services</a></li>
+                <li class="p-4 cursor-pointer font-medium text-2xl"><a href="#">Portfolios</a></li>
+                <li class="p-4 cursor-pointer font-medium text-2xl"><a href="#">Testimonials</a></li>
+            </ul>
+        </div>
+
+        <div class="connect-btn text-customGray">
+            <a class="px-8 py-4 bg-customYellow rounded-full font-bold text-2xl" href="#">Let's Talk.</a>
+        </div>
+    </nav>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
