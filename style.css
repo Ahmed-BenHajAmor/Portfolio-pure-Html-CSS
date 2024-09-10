@@ -22,6 +22,7 @@ body{
     font-size: 22px;
     background-color: #F3EFE8;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .logo > h1{
@@ -52,10 +53,11 @@ body{
 
 .home-img img{
     min-width: 29rem;
+    
 }
 
 .height-full{
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .home{
@@ -154,4 +156,30 @@ body{
     position: relative;
     top: -5rem;
     border: 7px #F3EFE8 solid;
+}
+
+.testimonials-card-text{
+    font-size: 21px;
+    font-weight: 600;
+   
+}
+
+.open i:first-child{
+    position: relative;
+    left: 27px;
+}
+
+.open{
+    position: relative;
+    top: -10px;
+}
+
+.close i:last-child{
+    position: relative;
+    left: -22px;
+}
+
+.close{
+    position: relative;
+    bottom: -10px;
 }
