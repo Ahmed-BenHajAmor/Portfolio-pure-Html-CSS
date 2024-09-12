@@ -26,29 +26,48 @@
                 }
             }
         }
+
+        
     </script>
 
 </head>
 <body>
-    <nav class="flex justify-between items-center px-12 py-5 ">
-        
+    <nav class="flex justify-between items-center px-6 py-5 bg-bgColor">
         <div class="logo text-customGray">
-            <h1 class="text-5xl">KA.</h1>
+            <h1 class="text-3xl font-bold">KA.</h1>
         </div>
 
-        <div class="links text-customGray ">
+        <div class="block md:hidden">
+            <button id="menu-toggle">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="menu" class="hidden md:flex md:items-center text-customGray">
             <ul class="flex gap-4">
-                <li class="p-4 cursor-pointer"><a href="#">Home</a></li>
-                <li class="p-4 cursor-pointer"><a href="#services">Services</a></li>
-                <li class="p-4 cursor-pointer"><a href="#portfolios">Portfolios</a></li>
-                <li class="p-4 cursor-pointer"><a href="#testimonials">Testimonials</a></li>
+                <li class="p-2 md:p-4 cursor-pointer"><a href="#">Home</a></li>
+                <li class="p-2 md:p-4 cursor-pointer"><a href="#services">Services</a></li>
+                <li class="p-2 md:p-4 cursor-pointer"><a href="#portfolios">Portfolios</a></li>
+                <li class="p-2 md:p-4 cursor-pointer"><a href="#testimonials">Testimonials</a></li>
             </ul>
         </div>
 
-        <div class="connect-btn text-customGray">
-            <a class="px-16 py-3 bg-customYellow rounded-full font-semibold" href="#">Let's Talk.</a>
+        <div class="hidden md:block text-customGray">
+            <a class="px-6 py-2 bg-customYellow rounded-full font-semibold" href="#">Let's Talk.</a>
         </div>
     </nav>
+
+    <div style="position: absolute; width: 100%;" id="mobile-menu" class="hidden md:hidden px-6 py-4 bg-bgColor text-customGray z-10 flex justify-center flex-col items-center">
+        <ul style="width: 100%;">
+            <li style="width: 100%;" class="p-2 cursor-pointer"><a style="text-align: center; width: 100%; display: block;" href="#">Home</a></li>
+            <li style="width: 100%;" class="p-2 cursor-pointer"><a style="text-align: center; width: 100%; display: block;" href="#services">Services</a></li>
+            <li style="width: 100%;" class="p-2 cursor-pointer"><a style="text-align: center; width: 100%; display: block;" href="#portfolios">Portfolios</a></li>
+            <li style="width: 100%;" class="p-2 cursor-pointer"><a style="text-align: center; width: 100%; display: block;" href="#testimonials">Testimonials</a></li>
+        </ul>
+        <a class="block mt-4 px-6 py-2 bg-customYellow rounded-full font-semibold text-center" href="#">Let's Talk.</a>
+    </div>
 
 
     <section class="home flex justify-center items-center">
@@ -80,7 +99,7 @@
 
     <section class="sliding-roll-container ">
         
-        <div class="slide-div flex gap-8 mt-8 p-8">
+        <div class="slide-div flex mt-8 p-8">
             <h3 class="flex items-center">UI/UX</h3> <img class="h-full" src="assets/yellow-star.png" alt="star" />
             <h3 class="flex items-center">DEVELOPMENT</h3> <img class="h-full" src="assets/yellow-star.png" alt="star" />
             <h3 class="flex items-center">PRODUCT DESIGN</h3> <img class="h-full" src="assets/yellow-star.png" alt="star" />
@@ -89,7 +108,7 @@
             
         </div>
 
-        <div class="slide-div flex gap-8 mt-8 p-8">
+        <div class="slide-div flex mt-8 p-8">
             <h3 class="flex items-center">UI/UX</h3> <img class="h-full" src="assets/yellow-star.png" alt="star" />
             <h3 class="flex items-center">DEVELOPMENT</h3> <img class="h-full" src="assets/yellow-star.png" alt="star" />
             <h3 class="flex items-center">PRODUCT DESIGN</h3> <img class="h-full" src="assets/yellow-star.png" alt="star" />
@@ -100,40 +119,40 @@
 
     </section>
 
-    <section id="services" class="services p-16 height-full flex flex-col justify-around">
+    <section id="services" class="services height-full flex flex-col justify-around">
         <div>
             <div class="header text-center">
-                <h1 class="text-6xl font-bold "><span class="custom-underline">Services</span></h1>
+                <h1 class="section-header font-bold "><span class="custom-underline">Services</span></h1>
                 <h4 class="pt-2 font-semibold">Here are the services we are providing to you</h4>
             </div>
     
-            <div class="services-content grid grid-cols-3 gap-12 mt-16">
-                <div class="w-full service-card flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full text-3xl">
+            <div class="services-content mt-16">
+                <div class="w-full service-card flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full ">
                     <i class="fas fa-address-card text-customGray"></i>
                     <p class="">UI/UX Designing</p>
                 </div>
         
-                <div class="w-full service-card flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full text-3xl">
+                <div class="w-full service-card flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full">
                     <i class="fas fa-address-card text-customGray"></i>
                     <p class="">Web Development</p>
                 </div>
         
-                <div class="w-full service-card flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full text-3xl">
+                <div class="w-full service-card flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full">
                     <i class="fas fa-address-card text-customGray"></i>
                     <p class="">Graphic Designing</p>
                 </div>
         
-                <div class=" w-full service-card flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full text-3xl">
+                <div class=" w-full service-card flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full">
                     <i class="fas fa-address-card text-customGray"></i>
                     <p class="">Product Designing</p>
                 </div>
         
-                <div class="w-full service-card flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full text-3xl">
+                <div class="w-full service-card flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full">
                     <i class="fas fa-address-card text-customGray"></i>
                     <p class="">Social Media Posts</p>
                 </div>
         
-                <div class="w-full flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full text-3xl">
+                <div class="w-full service-card flex justify-start items-center rounded-xl bg-customLightGray gap-8 p-10 w-full">
                     <i class="fas fa-address-card text-customGray"></i>
                     <p class="">App UI/UX</p>
                 </div>
@@ -149,14 +168,14 @@
         
     </section>
 
-    <section id="portfolios" class="portfolios p-16 height-full flex flex-col justify-around">
+    <section id="portfolios" class="portfolios height-full flex flex-col justify-around">
         <div>
             <div class="header text-center">
-                <h1 class="text-6xl font-bold "><span class="custom-underline">Portfolios</span></h1>
+                <h1 class="section-header font-bold "><span class="custom-underline">Portfolios</span></h1>
                 <h4 class="pt-2 font-semibold">Click on the cards to see my portfolios of related category.</h4>
             </div>
     
-            <div class="portfolios grid grid-cols-3 gap-12 mt-16">
+            <div class="portfolios-content mt-16">
                 <div class="flex flex-col justify-start p-8 border-4 border-customGray rounded-xl gap-16 text-customGray2">
                     <i class="fab fa-figma text-6xl"></i>
                     <h2 class="text-4xl font-midium ">UI/UX Designing.</h2>
@@ -204,15 +223,15 @@
         </div>  
     </section>
 
-    <section id="testimonials" class="testimonials p-16 height-full flex flex-col justify-around">
+    <section id="testimonials" class="testimonials height-full flex flex-col justify-around">
         <div>
             <div class="header text-center">
-                <h1 class="text-6xl font-bold "><span class="custom-underline">Testimonials</span></h1>
+                <h1 class="section-header font-bold "><span class="custom-underline">Testimonials</span></h1>
                 <h4 class="pt-2 font-semibold">Here are some testimonials from our clients.</h4>
             </div>
     
-            <div class="testimonials-content grid grid-cols-3 gap-12 mt-16">
-                <div class="bg-customLightGray flex flex-col items-center justify-around text-customGray mt-16 rounded-xl px-8 pb-8 z--1">
+            <div class="testimonials-content mt-16">
+                <div class="bg-customLightGray flex flex-col items-center justify-around text-customGray mt-16 rounded-xl z--1">
                     <div class="user-icon-container rounded-full bg-customGray ">
             
                         <i class="fa-regular fa-user text-bgColor text-7xl"></i>
@@ -233,7 +252,7 @@
                     <h3 class="custom-underline-small pt-8 z-10 text-3xl font-semibold text-customGray ">Vaseem Aziz</h3>
                 </div>
 
-                <div class="bg-customLightGray flex flex-col justify-between items-center text-customGray mt-16 rounded-xl px-8 pb-8 ">
+                <div class="bg-customLightGray flex flex-col justify-between items-center text-customGray mt-16 rounded-xl ">
                     <div class="user-icon-container rounded-full bg-customGray ">
             
                         <i class="fa-regular fa-user text-bgColor text-7xl"></i>
@@ -253,7 +272,7 @@
                 </div>
 
 
-                <div class="bg-customLightGray flex flex-col justify-around items-center text-customGray mt-16 rounded-xl px-8 pb-8 ">
+                <div class="bg-customLightGray flex flex-col justify-around items-center text-customGray mt-16 rounded-xl ">
                     <div class="user-icon-container rounded-full bg-customGray ">
             
                         <i class="fa-regular fa-user text-bgColor text-7xl"></i>
@@ -280,12 +299,12 @@
     
     </section>
     
-    <footer class="p-32 bg-customGray text-bgColor flex justify-around">
+    <footer class="bg-customGray text-bgColor flex justify-around">
         <div class="logo">
             <h1 class="text-8xl">KA.</h1>
         </div>
 
-        <div class="footer-links grid grid-cols-2 gap-4 text-base font-semibold">
+        <div class="footer-links font-semibold">
             <div class="flex gap-4 items-center">
                 <i class="fab fa-google text-4xl w-auto"></i>
                 <p>kazimahmad.business@gmail.com</p>
@@ -310,6 +329,13 @@
             
         </div>
     </footer>
-   
+   <script>
+        document.querySelector('#menu-toggle').addEventListener('click', () => {
+            console.log('in');
+            
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+   </script>
 </body>
 </html>

@@ -112,8 +112,12 @@ body{
 .sliding-roll-container {
     display: flex;
     align-items: center;
+    min-width: fit-content;
 }
 
+.slide-div{
+    gap: 20px;
+}
 .sliding-roll-container div{
     display: flex;
     justify-content: space-around;
@@ -142,9 +146,37 @@ body{
 }  
 
 
-
+.services{
+    padding: 50px;
+}
 .service-card{
-    width: fit-content;
+    width: 100%;
+    padding: 2.5rem;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    font-size: 30px;
+}
+
+.portfolios{
+    padding: 50px;
+}
+
+.portfolios-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    font-size: 30px;
+}
+
+.testimonials-content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    font-size: 30px;
 }
 
 .user-icon-container{
@@ -158,10 +190,18 @@ body{
     border: 7px #F3EFE8 solid;
 }
 
+.testimonials{
+    padding: 50px;
+}
+
 .testimonials-card-text{
     font-size: 21px;
     font-weight: 600;
    
+}
+
+.testimonials-content > div{
+    padding: 2rem;
 }
 
 .open i:first-child{
@@ -184,21 +224,125 @@ body{
     bottom: -10px;
 }
 
+footer{
+    padding: 150px;
+}
 
-@media screen and (max-width: 900px) {
+.section-header{
+    font-size: 3.75rem;
+}
+
+.footer-links{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px
+}
+@media (max-width: 900px) {
     .services{
         padding: 20px;
     }
     .services-content{
-        display: grid;
-    grid-template-columns: repeat(1, 1fr);
+        display: flex;
+        flex-direction: column;
 
     }
 
     .service-card{
-        width: 100%;
         font-size: 20px;
+        padding: 2.5rem 1rem;
+    }
+
+    .portfolios{
+        padding: 20px;
+    }
+    .portfolios-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 20px;
+
+    }
+
+    .testimonials-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    .testimonials-content > div{
+        margin-top: 80px;
+        padding: 1rem;
+    }
+
+    .testimonials{
+        padding: 20px;
     }
 
     
+    body{
+        font-size: 18px;
+    }
+
+    .section-header{
+        font-size: 35px;
+    }
+    .home{
+        padding: 10px;
+  
+    }
+    .home-img{
+        display: none;
+    }
+    .home-content-container > h1{
+        font-size: 30px;
+    }
+    #home-ul{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .home-btns{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .connect-btn{
+        width: fit-content;
+    }
+    .connect-btn a{
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .slide-div{
+        gap: 10px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px;
+    }
+
+    .footer-links{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+        font-size: 13px;
+        text-wrap: wrap;
+    }
+
+    .footer-links > div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
